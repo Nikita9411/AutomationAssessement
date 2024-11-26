@@ -1,14 +1,11 @@
 package com.Fitpeo.Pages;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class BasePage 
 {
-	WebDriver driver;	
+	public WebDriver driver;	
 	
 	public BasePage(WebDriver driver)
 	{
@@ -16,11 +13,11 @@ public class BasePage
 		PageFactory.initElements(driver, this);
 	}
 	
-	public String navigateToRevnueCalculator()
+	/*public String navigateToRevnueCalculator()
 	{
 		driver.get("https://fitpeo.com/revenue-calculator");
 		
 		return driver.getCurrentUrl();
 		
-	}
+	}*/
 }

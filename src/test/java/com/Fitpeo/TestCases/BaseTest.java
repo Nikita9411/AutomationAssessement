@@ -10,6 +10,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.Fitpeo.Pages.BasePage;
+import com.Fitpeo.Pages.NavigateToRC;
 
 public class BaseTest 
 {
@@ -35,19 +36,19 @@ public class BaseTest
 		  
 	  }
 	  
-	  @Test
+	 /* @Test
 	  public void naviagteToRevnueCollector()
 	  {
-		  BasePage bp= new BasePage(driver);
-		  String title = bp.navigateToRevnueCalculator();
+		  NavigateToRC bp= new NavigateToRC(driver);
+		  String title = bp.naviagteToRevnueCollector();
 		  
 		  Assert.assertEquals("https://fitpeo.com/revenue-calculator",title);
 		  		   
-	  }
+	  }*/
 	
 	@AfterMethod
 	public void close()
 	{
-		driver.close();
+		driver.quit();
 	}
 }

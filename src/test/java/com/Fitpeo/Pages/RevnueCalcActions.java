@@ -51,13 +51,13 @@ public class RevnueCalcActions extends BasePage
 	public String updateSliderValue(int value)
 	{
 			
-		System.out.println("Default value is :- "+slider.getLocation().getX());
+		//System.out.println("Default value is :- "+slider.getLocation().getX());
 		
 		Actions act = new Actions(driver);	
 		
-		((JavascriptExecutor) driver).executeScript("arguments[0].click();", slider);
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", slider);
 		
-		act.dragAndDropBy(slider, value,0).build().perform();
+		act.moveToElement(slider).dragAndDropBy(slider, value, 622).build().perform();
 		
 		return textField.getText();
 		
